@@ -1,0 +1,159 @@
+.card {
+  width: 100%; /* Keeps the card responsive */
+  max-width: 400px; /* Reduces the max width from 500px to 400px */
+  margin: 0 auto; /* Centers the card horizontally */
+  padding: 20px 40px 20px 40px; /* Increases padding on the left side to 60px */
+  margin-left: 10px; /* Moves the card towards the left side */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: flex-start; /* Align items at the top */
+  height: auto; /* Ensure card adjusts to fit content */
+  min-height: 500px; /* Optional minimum height for the card */
+  margin-right: 20px; /* Reduces the size of the card from the right side */
+}
+
+.card .title {
+  text-align: center; /* Centers the title horizontally */
+  font-size: 20px; /* Adjust font size as needed */
+  font-weight: 600;
+  color: var(--text-primary); /* Adjust text color if necessary */
+  margin: 0; /* Remove any default margin */
+  padding-top: 20px; /* Space between the top and title */
+}
+
+.progressContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.circleProgress {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progressValue {
+  position: absolute;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.circleBackground {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.05);
+}
+
+.circleValue {
+  fill: none;
+  stroke: var(--secondary-color);
+  stroke-linecap: round;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  transition: stroke-dashoffset 1s ease;
+  stroke-dashoffset: 377; /* Default to 0% */
+}
+
+.circleValue.animate {
+  animation: circleProgress 1.5s ease forwards;
+}
+
+.stepsSection {
+  margin-top: 15px;
+  background-color: #f5f5f5; /* Light gray background */
+  padding: 20px; /* Optional: add padding for spacing */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.stepsTitle {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.stepsList {
+  list-style: none;
+  padding: 0;
+}
+
+.stepsList.completedSteps {
+  margin-bottom: 20px; /* Adjust this value to control the space */
+}
+
+.stepsList.remainingSteps {
+  padding-top: 20px; /* Add top padding for space between completed and remaining */
+}
+
+/* Add a dividing line */
+.stepsSection .divider {
+  height: 10px; /* Thicker line */
+  background-color: white; /* White dividing line */
+  margin: 10px 0; /* Add spacing around the dividing line */
+  width: calc(100% + 50px); /* Extend the width beyond the container */
+  margin-left: -25px; /* Move the line to the left */
+  margin-right: -30px; /* Move the line to the right */
+}
+
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px; /* Decreased margin between items */
+  font-size: 12px; /* Reduced font size for text */
+  padding: 8px; /* Reduced padding for a tighter layout */
+  background-color: #f5f5f5; /* Light gray background for the item */
+  border-radius: 8px; /* Optional: rounded corners for a softer look */
+}
+
+.stepDot {
+  width: 8px; /* Smaller dot size */
+  height: 8px; /* Smaller dot size */
+  border-radius: 50%;
+  margin-right: 6px; /* Reduced margin between dot and text */
+}
+
+.completed {
+  background-color: var(--accent-color); /* Color for completed steps (e.g., green) */
+}
+
+.pending {
+  background-color: #e0e0e0; /* Light gray for pending steps */
+}
+
+.stepText {
+  flex: 1;
+  font-size: 12px; /* Smaller text size for the step text */
+  color: var(--text-secondary); /* Secondary color for text */
+}
+
+.stepCheck {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White checkmark color */
+  border-radius: 50%; /* Make it circular */
+  width: 15px; /* Set the width */
+  height: 15px; /* Set the height */
+  display: flex;
+  align-items: center; /* Center the checkmark vertically */
+  justify-content: center; /* Center the checkmark horizontally */
+  font-size: 10px; /* Adjust font size for the checkmark */
+  font-weight: bold;
+}
+
+.stepPending {
+  color: #bdbdbd; /* Light gray for pending steps */
+}
+
+
+@keyframes circleProgress {
+  to {
+    stroke-dashoffset: 56.55; /* 85% of 377 */
+  }
+}

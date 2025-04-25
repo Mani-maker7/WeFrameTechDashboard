@@ -1,0 +1,87 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  background-color: #f8f7f7;  
+
+  height: 100%;
+  animation: fadeIn 0.5s ease-in-out;
+
+  margin-left: -280px; /* Pulls the container to the left */
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -6px;  /* Move image to the top with margin */
+}
+
+.image {
+  width: 90px;  /* Adjust the width of the image */
+  height: 90px;  /* Adjust the height of the image */
+  border-radius: 40%;  /* Optional: Makes the image circular */
+  object-fit: cover;   /* Ensures the image maintains its aspect ratio */
+}
+
+.chatBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* Align items to the top */
+  align-items: center;         /* Center horizontally */
+  height: 100%;
+  padding: 20px;
+  gap: 30px;                    /* Adds spacing between elements */
+}
+
+
+.welcomeMessage {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.welcomeMessage h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.chatInput {
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  margin-top: auto;
+}
+
+.inputField {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color var(--transition-speed);
+}
+
+.inputField:focus {
+  border-color: var(--secondary-color);
+}
+
+.sendButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin-left: 10px;
+  transition: background-color var(--transition-speed);
+}
+
+.sendButton:hover {
+  background-color: #3b7bce;
+}

@@ -1,0 +1,25 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.mainContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 225px);
+  transition: width var(--transition-speed);
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--background-light);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    width: 100%;
+  }
+}

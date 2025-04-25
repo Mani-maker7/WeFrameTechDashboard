@@ -1,0 +1,77 @@
+.card {
+  width: 100%; /* Adjust width percentage */
+  max-width: 600px; /* Optional max-width */
+  margin: 0 auto; /* Center the card */
+  margin-left: -40px; /* Moves the card towards the left side */
+  padding: 20px; /* Optional: padding around the entire card */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items at the top */
+  height: 10px; /* Ensure card adjusts to fit content */
+  min-height: 275px; /* Optional minimum height for the card */
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.count {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.growth {
+  display: flex;
+  align-items: center;
+}
+
+.growthBadge {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--accent-color);
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 25px;
+}
+
+.financialData {
+  display: flex;
+  margin-top: 20px;
+}
+
+.dataColumn {
+  flex: 1;
+  padding: 15px;
+  background-color: var(--background-light);
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.dataColumn:first-child {
+  margin-right: 10px;
+}
+
+.dataColumn:hover {
+  transform: translateY(-3px);
+}
+
+.dataLabel {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.dataValue {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}

@@ -1,0 +1,139 @@
+.card {
+  width: 100%; /* Adjust width percentage */
+  max-width: 600px; /* Optional max-width */
+  margin: 0 auto; /* Center the card */
+  margin-left: -40px; /* Moves the card towards the left side */
+  padding: 20px; /* Optional: padding around the entire card */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items at the top */
+  height: auto; /* Ensure card adjusts to fit content */
+  min-height: 280px; /* Optional minimum height for the card */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures items are spaced out */
+  gap: 20px; /* Space between elements */
+  margin-bottom: 15px;
+}
+
+.countContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Adds space between count and growth */
+  flex-grow: 1; /* Makes this container take up available space */
+}
+
+.count {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.countAndGrowth {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adds a bit of space between the count and growth */
+}
+
+.growth {
+  display: flex;
+  align-items: center;
+  margin-left: 0; /* Remove the left margin */
+  white-space: nowrap; /* Prevents wrapping */
+}
+
+.growthBadge {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--accent-color);
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.avatarGroup {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* This moves the avatar group to the right */
+}
+
+.avatars {
+  display: flex;
+  gap: -8px; /* Closer spacing between avatars */
+}
+
+.avatars img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+.moreCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+  background-color: #f5f5f5;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+
+.progressSection {
+  margin-top: 15px;
+}
+
+.stageItem {
+  margin-bottom: 16px;
+}
+
+.stageInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.stageDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.stageName {
+  font-size: 14px;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.stageCount {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.progressBar {
+  width: 100%;
+}
+
+.progressTrack {
+  height: 8px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+}
