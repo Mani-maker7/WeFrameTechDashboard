@@ -1,12 +1,10 @@
 {
   "name": "franchise-dashboard",
   "version": "0.1.0",
-  "homepage": "https://mani-maker7.github.io/WeFrameTechDashboard/",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "deploy": "npm run build && gh-pages -d out",
     "start": "next start",
     "lint": "next lint"
   },
@@ -17,8 +15,5 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwindcss": "^4.1.4"
-  },
-  "devDependencies": {
-    "gh-pages": "^6.3.0"
   }
 }
